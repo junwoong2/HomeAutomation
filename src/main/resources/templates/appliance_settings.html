@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appliance Settings</title>
+</head>
+<body>
+<h2>Appliance Settings</h2>
+
+<form action="/settings/appliances" method="post">
+  <!-- 각 가전제품을 조절할 수 있는 체크박스 -->
+  <label for="tvOn">TV:</label>
+  <input type="checkbox" id="tvOn" name="tvOn" th:checked="${applianceSettings.tvOn}">
+  <br>
+
+  <label for="airConditionerOn">Air Conditioner:</label>
+  <input type="checkbox" id="airConditionerOn" name="airConditionerOn" th:checked="${applianceSettings.airConditionerOn}">
+  <br>
+
+  <label for="computerOn">Computer:</label>
+  <input type="checkbox" id="computerOn" name="computerOn" th:checked="${applianceSettings.computerOn}">
+  <br>
+
+  <button type="submit">Save</button>
+</form>
+
+</body>
+</html>

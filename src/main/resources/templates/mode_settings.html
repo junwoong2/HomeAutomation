@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode Settings</title>
+    <style>
+        .mode-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 300px; /* Adjust as needed */
+        }
+
+        .mode-button {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h2>Mode Settings</h2>
+
+<div class="mode-container">
+    <div class="mode-button" onclick="setMode('sleep')">취침모드</div>
+    <div class="mode-button" onclick="setMode('away')">외출모드</div>
+</div>
+
+</body>
+</html>

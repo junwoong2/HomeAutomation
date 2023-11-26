@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .settings-button {
+      display: inline-block;
+      padding: 10px;
+      margin: 5px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+  <title>Settings</title>
+</head>
+<body>
+<h2>Settings</h2>
+
+<!-- 추가: 각 설정에 대한 버튼 -->
+<a href="/settings/heating" class="settings-button">Heating Settings</a>
+<br>
+<a href="/settings/lighting" class="settings-button">Lighting Settings</a>
+<br>
+<a href="/settings/appliances" class="settings-button">Appliances Settings</a>
+<br>
+<a href="/settings/mode" class="settings-button">Mode Settings</a>
+</body>
+</html>

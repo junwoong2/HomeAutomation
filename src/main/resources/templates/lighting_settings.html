@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lighting Settings</title>
+</head>
+<body>
+<h2>Lighting Settings</h2>
+
+<form action="/settings/lighting" method="post">
+  <!-- 각 방의 불을 조절할 수 있는 체크박스 -->
+  <label for="room1Light">Room 1 Light:</label>
+  <input type="checkbox" id="room1Light" name="room1Light" th:checked="${lightingSettings.room1Light}">
+  <br>
+
+  <label for="room2Light">Room 2 Light:</label>
+  <input type="checkbox" id="room2Light" name="room2Light" th:checked="${lightingSettings.room2Light}">
+  <br>
+
+  <label for="livingRoomLight">Living Room Light:</label>
+  <input type="checkbox" id="livingRoomLight" name="livingRoomLight" th:checked="${lightingSettings.livingRoomLight}">
+  <br>
+
+  <label for="kitchenLight">Kitchen Light:</label>
+  <input type="checkbox" id="kitchenLight" name="kitchenLight" th:checked="${lightingSettings.kitchenLight}">
+  <br>
+
+  <label for="bathroomLight">Bathroom Light:</label>
+  <input type="checkbox" id="bathroomLight" name="bathroomLight" th:checked="${lightingSettings.bathroomLight}">
+  <br>
+
+  <button type="submit">Save</button>
+</form>
+
+</body>
+</html>

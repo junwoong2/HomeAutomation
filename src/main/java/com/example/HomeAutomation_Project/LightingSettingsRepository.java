@@ -1,0 +1,6 @@
+package com.example.HomeAutomation_Project;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LightingSettingsRepository extends JpaRepository<LightingSettings, Long> {
+}
