@@ -24,6 +24,6 @@ public class HeatingSettingController {
     @PostMapping("/settings/heating")
     public String saveHeatingSettings(TemperatureSetting temperatureSetting) {
         temperatureSettingRepository.save(temperatureSetting);
-        return "redirect:/setting/heating";
+        return "redirect:/setting/setting/heating";
     }
 }

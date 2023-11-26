@@ -16,24 +16,24 @@
 
 <form action="/setting/heating" method="post">
   <!-- 방1 온도 입력 필드 -->
-  <label for="room1Temperature">Room 1:</label>
+  <label for="room1Temperature">방 1 :</label>
   <input type="number" id="room1Temperature" name="room1Temperature" class="temperature-input"
          th:value="${temperatureSetting.room1Temperature}" required>
   <br>
 
   <!-- 방2 온도 입력 필드 -->
-  <label for="room2Temperature">Room 2:</label>
+  <label for="room2Temperature">방 2 : </label>
   <input type="number" id="room2Temperature" name="room2Temperature" class="temperature-input"
          th:value="${temperatureSetting.room2Temperature}" required>
   <br>
 
   <!-- 거실 온도 입력 필드 -->
-  <label for="livingRoomTemperature">Living Room:</label>
+  <label for="livingRoomTemperature">거실 : </label>
   <input type="number" id="livingRoomTemperature" name="livingRoomTemperature" class="temperature-input"
          th:value="${temperatureSetting.livingRoomTemperature}" required>
   <br>
 
-  <button type="submit">Save</button>
+  <button type="submit"> 저장 </button>
 </form>
 
 </body>

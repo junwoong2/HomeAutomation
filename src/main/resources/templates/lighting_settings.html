@@ -11,27 +11,27 @@
 
 <form action="/settings/lighting" method="post">
   <!-- 각 방의 불을 조절할 수 있는 체크박스 -->
-  <label for="room1Light">Room 1 Light:</label>
+  <label for="room1Light">방 1 : </label>
   <input type="checkbox" id="room1Light" name="room1Light" th:checked="${lightingSettings.room1Light}">
   <br>
 
-  <label for="room2Light">Room 2 Light:</label>
+  <label for="room2Light">방 2 : </label>
   <input type="checkbox" id="room2Light" name="room2Light" th:checked="${lightingSettings.room2Light}">
   <br>
 
-  <label for="livingRoomLight">Living Room Light:</label>
+  <label for="livingRoomLight">거실 : </label>
   <input type="checkbox" id="livingRoomLight" name="livingRoomLight" th:checked="${lightingSettings.livingRoomLight}">
   <br>
 
-  <label for="kitchenLight">Kitchen Light:</label>
+  <label for="kitchenLight">부엌 : </label>
   <input type="checkbox" id="kitchenLight" name="kitchenLight" th:checked="${lightingSettings.kitchenLight}">
   <br>
 
-  <label for="bathroomLight">Bathroom Light:</label>
+  <label for="bathroomLight">화장실 : </label>
   <input type="checkbox" id="bathroomLight" name="bathroomLight" th:checked="${lightingSettings.bathroomLight}">
   <br>
 
-  <button type="submit">Save</button>
+  <button type="submit"> 저장 </button>
 </form>
 
 </body>
