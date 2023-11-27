@@ -1,4 +1,4 @@
-package com.example.HomeAutomation_Project;
+package com.example.HomeAutomation_Project.Domain;
 
 import jakarta.persistence.Entity;
 
@@ -46,15 +46,4 @@ public class LightingSettings {
         this.bathroomLight = bathroomLight;
     }
 
-    @Override
-    public String toString() {
-        return "LightingSettings{" +
-                "id=" + id +
-                ", room1Light=" + room1Light +
-                ", room2Light=" + room2Light +
-                ", livingRoomLight=" + livingRoomLight +
-                ", kitchenLight=" + kitchenLight +
-                ", bathroomLight=" + bathroomLight +
-                '}';
-    }
 }

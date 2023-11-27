@@ -1,4 +1,4 @@
-package com.example.HomeAutomation_Project;
+package com.example.HomeAutomation_Project.Domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -33,13 +33,4 @@ public class ApplianceSettings {
         this.computerOn = computerOn;
     }
 
-    @Override
-    public String toString() {
-        return "ApplianceSettings{" +
-                "id=" + id +
-                ", tvOn=" + tvOn +
-                ", airConditionerOn=" + airConditionerOn +
-                ", computerOn=" + computerOn +
-                '}';
-    }
 }

@@ -1,5 +1,7 @@
-package com.example.HomeAutomation_Project;
+package com.example.HomeAutomation_Project.Controller;
 
+import com.example.HomeAutomation_Project.Domain.TemperatureSetting;
+import com.example.HomeAutomation_Project.Repository.TemperatureSettingRepository;
 import  org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

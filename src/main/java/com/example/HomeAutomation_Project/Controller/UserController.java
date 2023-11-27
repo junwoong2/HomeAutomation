@@ -1,5 +1,8 @@
-package com.example.HomeAutomation_Project;
+package com.example.HomeAutomation_Project.Controller;
 
+import com.example.HomeAutomation_Project.Domain.User;
+import com.example.HomeAutomation_Project.Repository.UserRepository;
+import com.example.HomeAutomation_Project.Service.UserService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

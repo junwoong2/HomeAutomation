@@ -1,5 +1,7 @@
-package com.example.HomeAutomation_Project;
+package com.example.HomeAutomation_Project.Service;
 
+import com.example.HomeAutomation_Project.Domain.User;
+import com.example.HomeAutomation_Project.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

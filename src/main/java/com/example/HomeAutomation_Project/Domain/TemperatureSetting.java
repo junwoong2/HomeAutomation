@@ -1,4 +1,4 @@
-package com.example.HomeAutomation_Project;
+package com.example.HomeAutomation_Project.Domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -33,13 +33,4 @@ public class TemperatureSetting {
         this.livingRoomTemperature = livingRoomTemperature;
     }
 
-    @Override
-    public String toString() {
-        return "TemperatureSettings{" +
-                "id=" + id +
-                ", room1Temperature=" + room1Temperature +
-                ", room2Temperature=" + room2Temperature +
-                ", livingRoomTemperature=" + livingRoomTemperature +
-                '}';
-    }
 }

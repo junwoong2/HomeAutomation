@@ -1,4 +1,4 @@
-package com.example.HomeAutomation_Project;
+package com.example.HomeAutomation_Project.Domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
