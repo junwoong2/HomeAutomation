@@ -4,27 +4,60 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/applianceSettingStyle.css">
+  <style>
+    .on-button.active {
+      background-color: green; /* ON 상태일 때의 색상 */
+    }
+
+    .off-button.active {
+      background-color: red; /* OFF 상태일 때의 색상 */
+    }
+  </style>
   <title>가전제품 설정</title>
 </head>
 <body>
 <h2>가전제품 설정</h2>
 
 <form action="/settings/appliances" method="post">
-  <!-- 각 가전제품을 조절할 수 있는 체크박스 -->
-  <label for="tvOn">TV : </label>
-  <input type="checkbox" id="tvOn" name="tvOn" th:checked="${applianceSettings.tvOn}">
-  <br>
+  <!-- 각 가전제품을 조절할 수 있는 ON/OFF 버튼 -->
+  <div class="appliance">
+    <label for="tvOn">TV: </label>
+    <button type="button" class="toggle-button on-button" id="tvOnButton" onclick="toggleAppliance('tvOn', 'tvOnButton', 'tvOffButton')">ON</button>
+    <button type="button" class="toggle-button off-button" id="tvOffButton" onclick="toggleAppliance('tvOff', 'tvOffButton', 'tvOnButton')">OFF</button>
+    <input type="hidden" id="tvOn" name="tvOn" th:value="${applianceSettings.tvOn}">
+  </div>
 
-  <label for="airConditionerOn">에어컨 : </label>
-  <input type="checkbox" id="airConditionerOn" name="airConditionerOn" th:checked="${applianceSettings.airConditionerOn}">
-  <br>
+  <div class="appliance">
+    <label for="airConditionerOn">에어컨: </label>
+    <button type="button" class="toggle-button on-button" id="airConditionerOnButton" onclick="toggleAppliance('airConditionerOn', 'airConditionerOnButton', 'airConditionerOffButton')">ON</button>
+    <button type="button" class="toggle-button off-button" id="airConditionerOffButton" onclick="toggleAppliance('airConditionerOff', 'airConditionerOffButton', 'airConditionerOnButton')">OFF</button>
+    <input type="hidden" id="airConditionerOn" name="airConditionerOn" th:value="${applianceSettings.airConditionerOn}">
+  </div>
 
-  <label for="computerOn">컴퓨터 : </label>
-  <input type="checkbox" id="computerOn" name="computerOn" th:checked="${applianceSettings.computerOn}">
-  <br>
+  <div class="appliance">
+    <label for="computerOn">컴퓨터: </label>
+    <button type="button" class="toggle-button on-button" id="computerOnButton" onclick="toggleAppliance('computerOn', 'computerOnButton', 'computerOffButton')">ON</button>
+    <button type="button" class="toggle-button off-button" id="computerOffButton" onclick="toggleAppliance('computerOff', 'computerOffButton', 'computerOnButton')">OFF</button>
+    <input type="hidden" id="computerOn" name="computerOn" th:value="${applianceSettings.computerOn}">
+  </div>
 
-  <button type="submit"> 저장 </button>
+  <!-- 다른 가전제품에 대한 버튼도 동일한 방식으로 추가 -->
+
+  <button type="submit">저장</button>
 </form>
 
+<script>
+  function toggleAppliance(applianceStatus, activeButtonId, inactiveButtonId) {
+    const activeButton = document.getElementById(activeButtonId);
+    const inactiveButton = document.getElementById(inactiveButtonId);
+    const hiddenInput = document.getElementById(applianceStatus);
+
+    activeButton.classList.add('active');
+    inactiveButton.classList.remove('active');
+
+    hiddenInput.value = (activeButton.classList.contains('on-button')) ? true : false;
+  }
+</script>
 </body>
 </html>

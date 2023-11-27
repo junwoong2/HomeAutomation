@@ -26,6 +26,7 @@ public class ApplianceSettingsController {
     @PostMapping("/settings/appliances")
     public String saveApplianceSettings(ApplianceSettings applianceSettings) {
         applianceSettingsRepository.save(applianceSettings);
-        return "redirect:/settings/appliances";
+        return "redirect:/settings/settings";
     }
+
 }

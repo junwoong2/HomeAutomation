@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ModeSettingsController {
@@ -53,7 +54,17 @@ public class ModeSettingsController {
         applianceSettings.setComputerOn(false);
         applianceSettingsRepository.save(applianceSettings);
 
-        return "redirect:/settings/mode";
+        return "redirect:/settings/settings";
+    }
+
+    @PostMapping("/settings/mode")
+    public String setMode(@RequestParam("mode") String mode) {
+        if ("sleep".equals(mode)) {
+            setSleepMode();
+        } else if ("away".equals(mode)) {
+            setAwayMode();
+        }
+        return "redirect:/settings/settings";
     }
 
     @PostMapping("/settings/mode/away")
@@ -79,6 +90,6 @@ public class ModeSettingsController {
         applianceSettings.setComputerOn(false);
         applianceSettingsRepository.save(applianceSettings);
 
-        return "redirect:/settings/mode";
+        return "redirect:/settings/settings";
     }
 }

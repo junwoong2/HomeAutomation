@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
+    <link rel="stylesheet" type="text/css" href="/loginStyle.css">
 </head>
 <body>
+<h2>HOME AUTOMATION</h2>
 <h2>로그인</h2>
 <form action="/login" method="post">
-    <label for="username">Username:</label>
+    <label for="username">아이디:</label>
     <input type="text" id="username" name="username" required>
     <br>
-    <label for="password">Password:</label>
+    <label for="password">비밀번호:</label>
     <input type="password" id="password" name="password" required>
     <br>
     <button type="submit"> 로그인 </button>
@@ -23,8 +25,8 @@
 
 <!-- 추가: 로그인 후 설정으로 이동하는 버튼 -->
 <th:block th:if="${#authenticationPrincipal != null and #authentication.isAuthenticated()}">
-    <p>Welcome, <span th:text="${#authenticationPrincipal.name}"></span>!</p>
-    <a href="/settings/settings"> 설정 </a>
+    <p class="th-message">환영합니다, <span th:text="${#authenticationPrincipal.name}"></span>님!</p>
+    <a href="/settings/settings" class="th-settings-link"> 설정 </a>
 </th:block>
 </body>
 </html>

@@ -4,35 +4,74 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/lightingSettingStyle.css">
+  <style>
+    .on-button.active {
+      background-color: green; /* ON 상태일 때의 색상 */
+    }
+
+    .off-button.active {
+      background-color: red; /* OFF 상태일 때의 색상 */
+    }
+  </style>
   <title>조명 설정</title>
 </head>
 <body>
 <h2>조명 설정</h2>
 
 <form action="/settings/lighting" method="post">
-  <!-- 각 방의 불을 조절할 수 있는 체크박스 -->
-  <label for="room1Light">방 1 : </label>
-  <input type="checkbox" id="room1Light" name="room1Light" th:checked="${lightingSettings.room1Light}">
-  <br>
+  <!-- 각 방의 불을 조절할 수 있는 ON/OFF 버튼 -->
+  <div class="lighting">
+    <label for="room1Light">방 1 :</label>
+    <button type="button" class="toggle-button on-button" id="room1OnButton" onclick="toggleLight('room1Light', 'room1OnButton', 'room1OffButton')">ON</button>
+    <button type="button" class="toggle-button off-button" id="room1OffButton" onclick="toggleLight('room1Off', 'room1OffButton', 'room1OnButton')">OFF</button>
+    <input type="hidden" id="room1Light" name="room1Light" th:value="${lightingSettings.room1Light}">
+  </div>
 
-  <label for="room2Light">방 2 : </label>
-  <input type="checkbox" id="room2Light" name="room2Light" th:checked="${lightingSettings.room2Light}">
-  <br>
+  <div class="lighting">
+    <label for="room2Light">방 2 :</label>
+    <button type="button" class="toggle-button on-button" id="room2OnButton" onclick="toggleLight('room2Light', 'room2OnButton', 'room2OffButton')">ON</button>
+    <button type="button" class="toggle-button off-button" id="room2OffButton" onclick="toggleLight('room2Off', 'room2OffButton', 'room2OnButton')">OFF</button>
+    <input type="hidden" id="room2Light" name="room2Light" th:value="${lightingSettings.room2Light}">
+  </div>
 
-  <label for="livingRoomLight">거실 : </label>
-  <input type="checkbox" id="livingRoomLight" name="livingRoomLight" th:checked="${lightingSettings.livingRoomLight}">
-  <br>
+  <div class="lighting">
+    <label for="livingRoomLight">거실 :</label>
+    <button type="button" class="toggle-button on-button" id="livingRoomOnButton" onclick="toggleLight('livingRoomLight', 'livingRoomOnButton', 'livingRoomOffButton')">ON</button>
+    <button type="button" class="toggle-button off-button" id="livingRoomOffButton" onclick="toggleLight('livingRoomOff', 'livingRoomOffButton', 'livingRoomOnButton')">OFF</button>
+    <input type="hidden" id="livingRoomLight" name="livingRoomLight" th:value="${lightingSettings.livingRoomLight}">
+  </div>
 
-  <label for="kitchenLight">부엌 : </label>
-  <input type="checkbox" id="kitchenLight" name="kitchenLight" th:checked="${lightingSettings.kitchenLight}">
-  <br>
+  <div class="lighting">
+    <label for="kitchenLight">부엌 :</label>
+    <button type="button" class="toggle-button on-button" id="kitchenOnButton" onclick="toggleLight('kitchenLight', 'kitchenOnButton', 'kitchenOffButton')">ON</button>
+    <button type="button" class="toggle-button off-button" id="kitchenOffButton" onclick="toggleLight('kitchenOff', 'kitchenOffButton', 'kitchenOnButton')">OFF</button>
+    <input type="hidden" id="kitchenLight" name="kitchenLight" th:value="${lightingSettings.kitchenLight}">
+  </div>
 
-  <label for="bathroomLight">화장실 : </label>
-  <input type="checkbox" id="bathroomLight" name="bathroomLight" th:checked="${lightingSettings.bathroomLight}">
-  <br>
+  <div class="lighting">
+    <label for="bathroomLight">화장실 :</label>
+    <button type="button" class="toggle-button on-button" id="bathroomOnButton" onclick="toggleLight('bathroomLight', 'bathroomOnButton', 'bathroomOffButton')">ON</button>
+    <button type="button" class="toggle-button off-button" id="bathroomOffButton" onclick="toggleLight('bathroomOff', 'bathroomOffButton', 'bathroomOnButton')">OFF</button>
+    <input type="hidden" id="bathroomLight" name="bathroomLight" th:value="${lightingSettings.bathroomLight}">
+  </div>
 
-  <button type="submit"> 저장 </button>
+  <!-- 이하 동일한 방식으로 추가적인 불을 설정할 수 있습니다. -->
+
+  <button type="submit">저장</button>
 </form>
 
+<script>
+  function toggleLight(applianceStatus, activeButtonId, inactiveButtonId) {
+    const activeButton = document.getElementById(activeButtonId);
+    const inactiveButton = document.getElementById(inactiveButtonId);
+    const hiddenInput = document.getElementById(applianceStatus);
+
+    activeButton.classList.add('active');
+    inactiveButton.classList.remove('active');
+
+    hiddenInput.value = (activeButton.classList.contains('on-button')) ? true : false;
+  }
+</script>
 </body>
 </html>

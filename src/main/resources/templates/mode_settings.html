@@ -28,10 +28,12 @@
 <body>
 <h2>모드 설정</h2>
 
-<div class="mode-container">
-    <div class="mode-button" onclick="setMode('sleep')">취침모드</div>
-    <div class="mode-button" onclick="setMode('away')">외출모드</div>
-</div>
+<form action="/settings/mode" method="post">
+    <div class="mode-container">
+        <button type="submit" name="mode" value="sleep" class="mode-button">취침모드</button>
+        <button type="submit" name="mode" value="away" class="mode-button">외출모드</button>
+    </div>
+</form>
 
 </body>
 </html>

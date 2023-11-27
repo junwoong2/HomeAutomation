@@ -1,0 +1,50 @@
+/* 기본 스타일 초기화 */
+body, h2, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 50px;
+    color: #333;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* 환영 메시지 및 설정 링크 스타일링 */
+.th-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.th-settings-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.th-settings-link:hover {
+    color: #2980b9;
+}

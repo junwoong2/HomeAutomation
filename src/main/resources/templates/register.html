@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <link rel="stylesheet" type="text/css" href="/registerStyle.css">
 </head>
 <body>
 <h2>회원가입</h2>
 <form action="/register" method="post">
-    <label for="username">ID:</label>
+    <label for="username">아이디:</label>
     <input type="text" id="username" name="username" required>
     <br>
-    <label for="password">Password:</label>
+    <label for="password">비밀번호:</label>
     <input type="password" id="password" name="password" required>
     <br>
-    <label for="apartmentBuilding">동 : :</label>
+    <label for="apartmentBuilding">아파트 동:</label>
     <input type="text" id="apartmentBuilding" name="apartmentBuilding" required>
     <br>
-    <label for="apartmentNumber">호수 : </label>
+    <label for="apartmentNumber">아파트 호수:</label>
     <input type="text" id="apartmentNumber" name="apartmentNumber" required>
     <br>
     <button type="submit">회원가입</button>
