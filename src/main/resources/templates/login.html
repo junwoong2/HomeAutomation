@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>로그인</title>
 </head>
 <body>
-<h2>Login</h2>
+<h2>로그인</h2>
 <form action="/login" method="post">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
@@ -22,8 +22,8 @@
 <a href="/register"> 회원가입 </a>
 
 <!-- 추가: 로그인 후 설정으로 이동하는 버튼 -->
-<th:block th:if="${#authentication != null and #authentication.isAuthenticated()}">
-    <p>Welcome, <span th:text="${#authentication.name}"></span>!</p>
+<th:block th:if="${#authenticationPrincipal != null and #authentication.isAuthenticated()}">
+    <p>Welcome, <span th:text="${#authenticationPrincipal.name}"></span>!</p>
     <a href="/settings/settings"> 설정 </a>
 </th:block>
 </body>

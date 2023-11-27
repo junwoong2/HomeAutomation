@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
 
 @Entity
 public class LightingSettings {
@@ -12,48 +13,33 @@ public class LightingSettings {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Getter
     private boolean room1Light;
+    @Getter
     private boolean room2Light;
+    @Getter
     private boolean livingRoomLight;
+    @Getter
     private boolean kitchenLight;
+    @Getter
     private boolean bathroomLight;
 
     // getters and setters
 
-    public boolean isRoom1Light() {
-        return room1Light;
-    }
-
     public void setRoom1Light(boolean room1Light) {
         this.room1Light = room1Light;
-    }
-
-    public boolean isRoom2Light() {
-        return room2Light;
     }
 
     public void setRoom2Light(boolean room2Light) {
         this.room2Light = room2Light;
     }
 
-    public boolean isLivingRoomLight() {
-        return livingRoomLight;
-    }
-
     public void setLivingRoomLight(boolean livingRoomLight) {
         this.livingRoomLight = livingRoomLight;
     }
 
-    public boolean isKitchenLight() {
-        return kitchenLight;
-    }
-
     public void setKitchenLight(boolean kitchenLight) {
         this.kitchenLight = kitchenLight;
-    }
-
-    public boolean isBathroomLight() {
-        return bathroomLight;
     }
 
     public void setBathroomLight(boolean bathroomLight) {

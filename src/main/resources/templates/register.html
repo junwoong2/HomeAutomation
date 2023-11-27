@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>회원가입</title>
 </head>
 <body>
-<h2>Register</h2>
+<h2>회원가입</h2>
 <form action="/register" method="post">
     <label for="username">ID:</label>
     <input type="text" id="username" name="username" required>
@@ -21,12 +21,11 @@
     <label for="apartmentNumber">호수 : </label>
     <input type="text" id="apartmentNumber" name="apartmentNumber" required>
     <br>
-    <button type="submit">Complete Registration</button>
+    <button type="submit">회원가입</button>
 </form>
 
-<!-- 추가: 회원가입이 성공했을 때 메시지 표시 -->
 <th:block th:if="${registrationSuccess}">
-    <p>Registration successful! You can now <a href="/login">login</a>.</p>
+    <p>회원가입 성공!<a href="/login">login</a>.</p>
 </th:block>
 </body>
 </html>

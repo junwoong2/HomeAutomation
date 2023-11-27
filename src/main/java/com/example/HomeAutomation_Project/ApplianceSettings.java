@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
 
 @Entity
 public class ApplianceSettings {
@@ -11,30 +12,21 @@ public class ApplianceSettings {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Getter
     private boolean tvOn;
+    @Getter
     private boolean airConditionerOn;
+    @Getter
     private boolean computerOn;
 
     // getters and setters
-
-    public boolean isTvOn() {
-        return tvOn;
-    }
 
     public void setTvOn(boolean tvOn) {
         this.tvOn = tvOn;
     }
 
-    public boolean isAirConditionerOn() {
-        return airConditionerOn;
-    }
-
     public void setAirConditionerOn(boolean airConditionerOn) {
         this.airConditionerOn = airConditionerOn;
-    }
-
-    public boolean isComputerOn() {
-        return computerOn;
     }
 
     public void setComputerOn(boolean computerOn) {

@@ -1,3 +1,5 @@
+package com.example.HomeAutomation_Project;
+
 import com.example.HomeAutomation_Project.ApplianceSettings;
 import com.example.HomeAutomation_Project.ApplianceSettingsRepository;
 import org.springframework.stereotype.Controller;

@@ -24,6 +24,6 @@ public class LightingSettingsController {
     @PostMapping("/settings/lighting")
     public String saveLightingSettings(LightingSettings lightingSettings) {
         lightingSettingsRepository.save(lightingSettings);
-        return "redirect:/settings/lighting";
+        return "redirect:/settings/settings";
     }
 }

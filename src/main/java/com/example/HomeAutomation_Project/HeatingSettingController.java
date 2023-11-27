@@ -1,6 +1,6 @@
 package com.example.HomeAutomation_Project;
 
-import org.springframework.stereotype.Controller;
+import  org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +24,6 @@ public class HeatingSettingController {
     @PostMapping("/settings/heating")
     public String saveHeatingSettings(TemperatureSetting temperatureSetting) {
         temperatureSettingRepository.save(temperatureSetting);
-        return "redirect:/setting/setting/heating";
+        return "redirect:/settings/settings";
     }
 }
