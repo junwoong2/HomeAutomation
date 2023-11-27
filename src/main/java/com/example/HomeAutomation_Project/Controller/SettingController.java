@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/settings" +
         "")
-public class SettingController {
+public class SettingController { // 설정을 선택할 수 있는 컨트톨러
 
     @GetMapping("/settings")
     public String settings(Model model) {

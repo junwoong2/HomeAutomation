@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class ModeSettingsController {
+public class ModeSettingsController { // 모드 설정에 대한 컨트롤러
 
     private final LightingSettingsRepository lightingSettingsRepository;
     private final TemperatureSettingRepository temperatureSettingsRepository;

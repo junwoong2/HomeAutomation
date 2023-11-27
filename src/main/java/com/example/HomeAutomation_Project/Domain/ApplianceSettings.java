@@ -11,15 +11,12 @@ public class ApplianceSettings {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Getter
     private boolean tvOn;
     @Getter
     private boolean airConditionerOn;
     @Getter
     private boolean computerOn;
-
-    // getters and setters
 
     public void setTvOn(boolean tvOn) {
         this.tvOn = tvOn;

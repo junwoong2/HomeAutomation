@@ -12,14 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class UserController {
-
+public class UserController { // 사용자에 대한 컨트롤러
     private final UserRepository userRepository;
     private final UserService userService;
-
-
-
-
 
     @GetMapping("/register")
     public String registerForm() {
@@ -40,8 +35,6 @@ public class UserController {
             return "register";  // 실패 시 다시 등록 페이지로 이동
         }
     }
-
-
 
     @Autowired
     public UserController(UserRepository userRepository, UserService userService) {

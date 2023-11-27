@@ -12,7 +12,6 @@ public class LightingSettings {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Getter
     private boolean room1Light;
     @Getter
@@ -24,26 +23,19 @@ public class LightingSettings {
     @Getter
     private boolean bathroomLight;
 
-    // getters and setters
-
     public void setRoom1Light(boolean room1Light) {
         this.room1Light = room1Light;
     }
-
     public void setRoom2Light(boolean room2Light) {
         this.room2Light = room2Light;
     }
-
     public void setLivingRoomLight(boolean livingRoomLight) {
         this.livingRoomLight = livingRoomLight;
     }
-
     public void setKitchenLight(boolean kitchenLight) {
         this.kitchenLight = kitchenLight;
     }
-
     public void setBathroomLight(boolean bathroomLight) {
         this.bathroomLight = bathroomLight;
     }
-
 }

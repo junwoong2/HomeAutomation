@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class LightingSettingsController {
+public class LightingSettingsController { // 조명 설정에 대한 컨트롤러
 
     private final LightingSettingsRepository lightingSettingsRepository;
 

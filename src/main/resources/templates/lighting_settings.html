@@ -7,11 +7,11 @@
   <link rel="stylesheet" type="text/css" href="/lightingSettingStyle.css">
   <style>
     .on-button.active {
-      background-color: green; /* ON 상태일 때의 색상 */
+      background-color: green;
     }
 
     .off-button.active {
-      background-color: red; /* OFF 상태일 때의 색상 */
+      background-color: red;
     }
   </style>
   <title>조명 설정</title>
@@ -20,7 +20,7 @@
 <h2>조명 설정</h2>
 
 <form action="/settings/lighting" method="post">
-  <!-- 각 방의 불을 조절할 수 있는 ON/OFF 버튼 -->
+
   <div class="lighting">
     <label for="room1Light">방 1 :</label>
     <button type="button" class="toggle-button on-button" id="room1OnButton" onclick="toggleLight('room1Light', 'room1OnButton', 'room1OffButton')">ON</button>
@@ -55,8 +55,6 @@
     <button type="button" class="toggle-button off-button" id="bathroomOffButton" onclick="toggleLight('bathroomOff', 'bathroomOffButton', 'bathroomOnButton')">OFF</button>
     <input type="hidden" id="bathroomLight" name="bathroomLight" th:value="${lightingSettings.bathroomLight}">
   </div>
-
-  <!-- 이하 동일한 방식으로 추가적인 불을 설정할 수 있습니다. -->
 
   <button type="submit">저장</button>
 </form>

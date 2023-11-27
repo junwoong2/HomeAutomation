@@ -9,7 +9,6 @@
     .on-button.active {
       background-color: green; /* ON 상태일 때의 색상 */
     }
-
     .off-button.active {
       background-color: red; /* OFF 상태일 때의 색상 */
     }
@@ -20,7 +19,7 @@
 <h2>가전제품 설정</h2>
 
 <form action="/settings/appliances" method="post">
-  <!-- 각 가전제품을 조절할 수 있는 ON/OFF 버튼 -->
+
   <div class="appliance">
     <label for="tvOn">TV: </label>
     <button type="button" class="toggle-button on-button" id="tvOnButton" onclick="toggleAppliance('tvOn', 'tvOnButton', 'tvOffButton')">ON</button>
@@ -41,8 +40,6 @@
     <button type="button" class="toggle-button off-button" id="computerOffButton" onclick="toggleAppliance('computerOff', 'computerOffButton', 'computerOnButton')">OFF</button>
     <input type="hidden" id="computerOn" name="computerOn" th:value="${applianceSettings.computerOn}">
   </div>
-
-  <!-- 다른 가전제품에 대한 버튼도 동일한 방식으로 추가 -->
 
   <button type="submit">저장</button>
 </form>
