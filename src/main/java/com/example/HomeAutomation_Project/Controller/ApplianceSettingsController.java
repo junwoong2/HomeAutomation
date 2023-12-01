@@ -25,7 +25,7 @@ public class ApplianceSettingsController { // 가전제품 설정에 대한 컨�
 
     @PostMapping("/settings/appliances")
     public String saveApplianceSettings(ApplianceSettings applianceSettings) {
-        applianceSettingsRepository.save(applianceSettings);
+        applianceSettingsRepository.save(applianceSettings); // 데이터베이스에 저장
         return "redirect:/settings/settings";
     }
 

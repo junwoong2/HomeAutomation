@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 
 @Entity
-public class LightingSettings {
+public class LightingSettings { // 조명 설정에 대한 엔티티
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

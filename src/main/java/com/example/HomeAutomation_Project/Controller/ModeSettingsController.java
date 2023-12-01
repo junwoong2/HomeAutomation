@@ -34,7 +34,7 @@ public class ModeSettingsController { // 모드 설정에 대한 컨트롤러
     }
 
     @PostMapping("/settings/mode/sleep")
-    public String setSleepMode() {
+    public String setSleepMode() { // 취침모드를 선택했을 때의 설정 내용
         // 취침모드 설정
         LightingSettings lightingSettings = new LightingSettings();
         lightingSettings.setRoom1Light(false);
@@ -42,19 +42,19 @@ public class ModeSettingsController { // 모드 설정에 대한 컨트롤러
         lightingSettings.setLivingRoomLight(false);
         lightingSettings.setKitchenLight(false);
         lightingSettings.setBathroomLight(false);
-        lightingSettingsRepository.save(lightingSettings);
+        lightingSettingsRepository.save(lightingSettings); // 조명 설정 저장
 
         TemperatureSetting temperatureSettings = new TemperatureSetting();
         temperatureSettings.setRoom1Temperature(24);
         temperatureSettings.setRoom2Temperature(24);
         temperatureSettings.setLivingRoomTemperature(24);
-        temperatureSettingsRepository.save(temperatureSettings);
+        temperatureSettingsRepository.save(temperatureSettings); // 난방 설정 저장
 
         ApplianceSettings applianceSettings = new ApplianceSettings();
         applianceSettings.setTvOn(false);
         applianceSettings.setAirConditionerOn(false);
         applianceSettings.setComputerOn(false);
-        applianceSettingsRepository.save(applianceSettings);
+        applianceSettingsRepository.save(applianceSettings); // 가전 제품 설정 저장
 
         return "redirect:/settings/settings";
     }
@@ -70,27 +70,27 @@ public class ModeSettingsController { // 모드 설정에 대한 컨트롤러
     }
 
     @PostMapping("/settings/mode/away")
-    public String setAwayMode() {
-        // 외출모드 설정
+    public String setAwayMode() { // 외출모드를 선택했을때 설정 내용
+
         LightingSettings lightingSettings = new LightingSettings();
         lightingSettings.setRoom1Light(false);
         lightingSettings.setRoom2Light(false);
         lightingSettings.setLivingRoomLight(false);
         lightingSettings.setKitchenLight(false);
         lightingSettings.setBathroomLight(false);
-        lightingSettingsRepository.save(lightingSettings);
+        lightingSettingsRepository.save(lightingSettings); // 조명 설정 저장
 
         TemperatureSetting temperatureSettings = new TemperatureSetting();
         temperatureSettings.setRoom1Temperature(0);
         temperatureSettings.setRoom2Temperature(0);
         temperatureSettings.setLivingRoomTemperature(0);
-        temperatureSettingsRepository.save(temperatureSettings);
+        temperatureSettingsRepository.save(temperatureSettings); // 난방 설정 저장
 
         ApplianceSettings applianceSettings = new ApplianceSettings();
         applianceSettings.setTvOn(false);
         applianceSettings.setAirConditionerOn(false);
         applianceSettings.setComputerOn(false);
-        applianceSettingsRepository.save(applianceSettings);
+        applianceSettingsRepository.save(applianceSettings); // 가전 제품 설정 저장
 
         return "redirect:/settings/settings";
     }

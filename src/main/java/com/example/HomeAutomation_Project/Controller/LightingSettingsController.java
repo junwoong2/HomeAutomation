@@ -25,7 +25,7 @@ public class LightingSettingsController { // 조명 설정에 대한 컨트롤�
 
     @PostMapping("/settings/lighting")
     public String saveLightingSettings(LightingSettings lightingSettings) {
-        lightingSettingsRepository.save(lightingSettings);
+        lightingSettingsRepository.save(lightingSettings); // 데이터베이스에 저장
         return "redirect:/settings/settings";
     }
 }

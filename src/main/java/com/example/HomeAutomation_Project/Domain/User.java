@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class User { // 사용자 정보에 대한 엔티티
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

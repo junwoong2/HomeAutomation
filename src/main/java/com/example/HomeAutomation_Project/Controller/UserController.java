@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class UserController { // 사용자에 대한 컨트롤러
+public class UserController { // 사용자에 대한 컨트롤러 & 회원가입 컨트롤러
     private final UserRepository userRepository;
     private final UserService userService;
 

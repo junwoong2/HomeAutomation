@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class HeatingSettingController { // 난방 설정에 대한 컨트롤러
-
     private final TemperatureSettingRepository temperatureSettingRepository;
 
     public HeatingSettingController(TemperatureSettingRepository temperatureSettingRepository) {
@@ -25,7 +24,7 @@ public class HeatingSettingController { // 난방 설정에 대한 컨트롤러
 
     @PostMapping("/settings/heating")
     public String saveHeatingSettings(TemperatureSetting temperatureSetting) {
-        temperatureSettingRepository.save(temperatureSetting);
+        temperatureSettingRepository.save(temperatureSetting); // 데이터베이스에 저장
         return "redirect:/settings/settings";
     }
 }

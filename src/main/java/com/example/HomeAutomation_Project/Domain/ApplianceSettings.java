@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 
 @Entity
-public class ApplianceSettings {
+public class ApplianceSettings { // 난방 설정에 대한 엔티티
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -11,7 +11,6 @@ public class LoginController { // 로그인 화면에 대한 컨트롤러
 
     @GetMapping("/login")
     public String login(Model model) {
-
         return "login";
     }
 
